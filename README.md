@@ -1,3 +1,5 @@
-# CoderHouse Curso React comision 57980
+# CoderHouse Curso React 
+Comisión 57980
+Profesor: Everaldo Guevara
 
-# Proyecto final
+# Proyecto final Bazar Tech
