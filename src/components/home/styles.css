@@ -1,0 +1,7 @@
+.Card-container {
+    width: 350px;
+    height: 400px;
+    background-color: grey;
+    border: 2px solid;
+    border-radius: 7px;
+}

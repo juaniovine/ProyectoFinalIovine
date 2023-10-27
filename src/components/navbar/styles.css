@@ -1,0 +1,57 @@
+.bg-custom {
+    background-color: rgb(122, 159, 232) !important;
+  }
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+ }
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+.navbar ul {
+    list-style: none;
+ }
+
+.navbar a {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  color: white;
+ }
+
+.navbar li:hover {
+  background-color:  rgb(100, 136, 207);
+ }
+
+.container-fluid {
+  display: flex;
+  margin: 20px;
+ }
+
+.navbar-brand {
+  justify-content: flex-start;
+  margin: 10px;
+ }
+
+.logo {
+  width: 400px;
+  height: auto;
+ }
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px
+ }
+
+.nav-item {
+  padding: 20px;
+ }
+
