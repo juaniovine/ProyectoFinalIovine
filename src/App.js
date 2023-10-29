@@ -6,11 +6,13 @@ import Notebooks from "./components/notebooks/Notebooks";
 import Celulares from "./components/celulares/Celulares";
 import Accesorios from "./components/accesorios/Accesorios";
 import Contacto from "./components/contacto/Contacto";
-// import Footer from "./components/footer/Footer";
-// import Productos from "./components/productos/Productos";
+import ContextProvider from './context/ContextProvider';
+
 
 function App() {
+
   return (
+    <ContextProvider>
     <div>
       <Navbar />
       <Routes>
@@ -21,6 +23,7 @@ function App() {
         <Route exact path="/contacto" element={<Contacto />} />
       </Routes>
     </div>
+    </ContextProvider>
   );
 }
 
