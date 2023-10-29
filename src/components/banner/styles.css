@@ -1,0 +1,25 @@
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(#dffaff, #effdff), url('../../../public/backgroundhome.jpg');
+}
+
+.banner-container {
+  text-align: center;
+  padding: 15% 0;
+}
+
+.banner-container h1 {
+  margin: 0;
+  color: rgb(122, 159, 232);
+  text-shadow: 1px 1px 3px #effaff;
+  font-size: 62px;
+  font-weight: bold;
+}
+
+.banner-container p {
+  color: rgb(99, 141, 224);
+  text-shadow: 1px 1px 3px #effaff;
+  font-size: 28px;
+}

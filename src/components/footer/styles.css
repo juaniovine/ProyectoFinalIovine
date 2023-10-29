@@ -1,0 +1,19 @@
+.footer-container {
+    padding: 5px 20px;
+    background-color: rgb(122, 159, 232) !important;
+  }
+
+.footer-container ul {
+    list-style-type: none;
+}
+
+.footer-links li {
+    text-decoration: none;
+    color: white;
+    }
+
+h3 {
+    color: white;
+
+}
+  

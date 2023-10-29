@@ -10,8 +10,8 @@
   
   .notification {
     position: absolute;
-    top: 35px;
-    right: -10px;
+    top: 24px;
+    right: 10px;
     background-color: red;
     color: white;
     border-radius: 50%;

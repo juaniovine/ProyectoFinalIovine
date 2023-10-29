@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react'
 import { collectionContext } from '../../context/CollectionContext';
 import '../cardwidget/styles.css'
+import { Link } from 'react-router-dom';
 
 export default function CardWidget() {
   
@@ -10,7 +11,7 @@ export default function CardWidget() {
 
   return (
     <div className="carrito-container">
-      <p>🛒</p>
+      <Link to={"/cart"}>🛒</Link>
       {/* <p>{collectionContext.length}</p> */}
       {cantidadItems >= 0 && <span className="notification">{cantidadItems}</span>}
     </div>
