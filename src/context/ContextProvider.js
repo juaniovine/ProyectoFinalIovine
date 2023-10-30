@@ -4,11 +4,12 @@ import { collectionContext } from './CollectionContext'
 
 export default function ContextProvider({children}) {
 
-    const [collection, setCollection] = useState()
+    const [collection, setCollection] = useState([]);
+    const [cart, setCart] = useState([]);
 
   return (
     <div>
-        <collectionContext.Provider value={{collection, setCollection}}>
+        <collectionContext.Provider value={{cart, collection, setCart}}>
         {children}
         </collectionContext.Provider> 
     </div>

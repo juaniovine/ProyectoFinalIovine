@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import Cards from "../cards-productos/Cards";
 import { db } from "../..";
 import {collection, getDoc, getDocs} from "firebase/firestore"
+import ContextProvider from "../../context/ContextProvider";
 
 export default function Notebooks() {
   
   const [notebooks, setNotebooks] = useState([]);
   
+
   const callFSDocs = async ()=> {
     const itemsCollection = collection (db,"notebooks");
     const res = await getDocs(itemsCollection);
@@ -24,7 +26,7 @@ export default function Notebooks() {
       {notebooks.map((elm) => {
         return (
           <Cards
-          // key={elm.id}
+            key={elm.id}
             nombre={elm.nombre}
             marca={elm.marca}
             precio={elm.precio}

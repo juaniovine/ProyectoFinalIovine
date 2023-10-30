@@ -1,9 +1,12 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import Cards from '../cards-productos/Cards'
 import { db } from "../..";
 import {collection, getDoc, getDocs} from "firebase/firestore"
+import ContextProvider from '../../context/ContextProvider';
 
 export default function Accesorios() {
+
+    
     const [accesorios, setAccesorios] = useState([])
 
     const callFSDocs = async ()=> {
@@ -21,7 +24,7 @@ export default function Accesorios() {
   return (
     <div className='page-container'>
         {accesorios.map((elm) => {
-            return <Cards nombre = {elm.nombre} marca = {elm.marca} precio = {elm.precio} categoria = {elm.categoria} descripcion = {elm.descripcion} imagen = {elm.imagen}/>
+            return <Cards key={elm.id} nombre = {elm.nombre} marca = {elm.marca} precio = {elm.precio} categoria = {elm.categoria} descripcion = {elm.descripcion} imagen = {elm.imagen}/>
         })}
     </div>
   )

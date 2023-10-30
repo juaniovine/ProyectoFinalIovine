@@ -30,6 +30,8 @@
   flex-wrap: wrap;
   background-color: #effdff;
   height: 80vh;
+  padding: 10px;
+  background-image: linear-gradient(#dffaff, #effdff);
 }
 
 

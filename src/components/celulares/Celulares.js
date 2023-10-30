@@ -1,10 +1,14 @@
-import React, { useEffect, useState} from 'react';
+import React, { useContext,useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import Cards from '../cards-productos/Cards'
 import { db } from "../..";
 import {collection, getDoc, getDocs} from "firebase/firestore"
+import ContextProvider from '../../context/ContextProvider';
 
 export default function Celulares() {
+
+    
+
     const [celulares, setCelulares] = useState([]);
 
     const callFSDocs = async ()=> {
@@ -21,7 +25,7 @@ export default function Celulares() {
   return (
     <div className='page-container'>
         {celulares.map((elm) => {
-            return <Cards nombre = {elm.nombre} marca = {elm.marca} precio = {elm.precio} categoria = {elm.categoria} descripcion = {elm.descripcion} imagen = {elm.imagen}/>
+            return <Cards key={elm.id} nombre = {elm.nombre} marca = {elm.marca} precio = {elm.precio} categoria = {elm.categoria} descripcion = {elm.descripcion} imagen = {elm.imagen}/>
         })}
     </div>
   )
