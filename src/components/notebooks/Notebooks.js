@@ -9,6 +9,9 @@ export default function Notebooks() {
   
   const [notebooks, setNotebooks] = useState([]);
   
+  useEffect(() => {
+    document.title = 'Bazar Tech - Notebooks';
+  }, []);
 
   const callFSDocs = async ()=> {
     const itemsCollection = collection (db,"notebooks");
@@ -33,6 +36,7 @@ export default function Notebooks() {
             categoria={elm.categoria}
             descripcion={elm.descripcion}
             imagen={elm.imagen}
+            altimg={elm.altimg}
           />
         );
       })}

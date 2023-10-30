@@ -3,6 +3,7 @@ import './styles.css'
 import CartElements from './CartElements'
 
 export default function CartContent() {
+  
   return (
     <CartElements/>
   )

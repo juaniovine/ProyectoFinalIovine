@@ -2,9 +2,9 @@ import React from 'react'
 import "./styles.css"
 import Notebooks from '../notebooks/Notebooks';
 
-export default function BotonCompra(key) {
+export default function BotonCompra() {
         const buyProducts = () => {
-          console.log([key]);
+          console.log("estoy comprado este producto");
         // actualizarContador();
         };
       

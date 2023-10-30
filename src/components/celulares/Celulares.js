@@ -7,7 +7,9 @@ import ContextProvider from '../../context/ContextProvider';
 
 export default function Celulares() {
 
-    
+  useEffect(() => {
+    document.title = 'Bazar Tech - Celulares';
+  }, []);
 
     const [celulares, setCelulares] = useState([]);
 
@@ -25,7 +27,7 @@ export default function Celulares() {
   return (
     <div className='page-container'>
         {celulares.map((elm) => {
-            return <Cards key={elm.id} nombre = {elm.nombre} marca = {elm.marca} precio = {elm.precio} categoria = {elm.categoria} descripcion = {elm.descripcion} imagen = {elm.imagen}/>
+            return <Cards key={elm.id} nombre = {elm.nombre} marca = {elm.marca} precio = {elm.precio} categoria = {elm.categoria} descripcion = {elm.descripcion} imagen = {elm.imagen} altimg={elm.altimg}/>
         })}
     </div>
   )
