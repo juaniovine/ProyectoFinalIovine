@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './styles.css'
 
 
 export default function Contacto() {
@@ -13,20 +14,20 @@ export default function Contacto() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form className='form-page' onSubmit={handleSubmit}>
+      <label className='form-name'>
         Nombre:
         <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
       </label>
-      <label>
+      <label className='form-lastname'>
         Apellido:
         <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
       </label>
-      <label>
-        Email:
+      <label className='form-email'>
+        E-mail:
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       </label>
-      <input type="submit" value="Enviar" />
+      <input className='submit-button' type="submit" value="Enviar" />
     </form>
   );
 }

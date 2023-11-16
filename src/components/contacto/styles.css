@@ -1,0 +1,15 @@
+.form-page {
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    background-color: #dffaff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.submit-button {
+    width: 100px;
+    margin: 20px;
+    padding: 7px;
+}

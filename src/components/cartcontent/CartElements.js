@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { collectionContext } from '../../context/CollectionContext';
-import './elemstyles.css'
 
 export default function CartElements() {
   const { collection, setCollection } = useContext(collectionContext);
@@ -14,17 +13,21 @@ export default function CartElements() {
     const updatedItems = [...updatedCollection];
     updatedItems[index] = {
       ...updatedItems[index],
-      cantidad: parseInt(newQuantity, 10) || 1, // ParseInt para asegurar que sea un número entero positivo
+      cantidad: parseInt(newQuantity, 10) || 1,
     };
 
     setUpdatedCollection(updatedItems);
-
-    // Puedes guardar la colección actualizada en el estado global aquí si es necesario
     setCollection(updatedItems);
   };
 
+  const calculateTotal = () => {
+    return updatedCollection.reduce((total, item) => {
+      return total + (item.precio * (item.cantidad || 1));
+    }, 0);
+  };
+
   return (
-    <div className='cart-items'>
+    <div>
       <h2>Elementos del Carrito</h2>
       {collection.length > 0 ? (
         <table>
@@ -61,6 +64,10 @@ export default function CartElements() {
       ) : (
         <p>No hay elementos en el carrito.</p>
       )}
+
+      <div>
+        <strong>Total del Carrito: ${calculateTotal()}</strong>
+      </div>
     </div>
   );
 }
