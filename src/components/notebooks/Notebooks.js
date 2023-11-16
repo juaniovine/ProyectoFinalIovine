@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import Cards from "../cards-productos/Cards";
 import { db } from "../..";
 import {collection, getDoc, getDocs} from "firebase/firestore"
-import ContextProvider from "../../context/ContextProvider";
 
 export default function Notebooks() {
   
   const [notebooks, setNotebooks] = useState([]);
-  
+  const {} = useParams()
+
   useEffect(() => {
     document.title = 'Bazar Tech - Notebooks';
   }, []);
@@ -29,7 +29,7 @@ export default function Notebooks() {
       {notebooks.map((elm) => {
         return (
           <Cards
-            key={elm.id}
+            id={elm.id}
             nombre={elm.nombre}
             marca={elm.marca}
             precio={elm.precio}

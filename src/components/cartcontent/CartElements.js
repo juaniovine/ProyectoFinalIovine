@@ -36,16 +36,15 @@ export default function CartElements() {
 
   return (
     <div>
-      <h2>Elementos del Carrito</h2>
       {collection.length > 0 ? (
-        <table>
+        <table className='cart-item-list'>
           <thead>
             <tr>
               <th>Producto</th>
-              <th>Descripcion</th>
               {/* <th>Imagen</th> */}
+              <th>Descripcion</th>
               <th>Cantidad</th>
-              <th>Total por Línea</th>
+              <th>Total producto</th>
               <th>Eliminar</th>
             </tr>
           </thead>
@@ -53,10 +52,10 @@ export default function CartElements() {
             {updatedCollection.map((item, index) => (
               <tr key={index}>
                 <td>{item.nombre}</td>
-                <td>{item.descripcion}</td>
                 {/* <td>
                   <img src={item.imagen} alt={`Imagen de ${item.nombre}`} style={{ width: '50px', height: '50px' }} />
                 </td> */}
+                <td>{item.descripcion}</td>
                 <td>
                   <input
                     type="number"
@@ -77,8 +76,8 @@ export default function CartElements() {
         <p>No hay elementos en el carrito.</p>
       )}
 
-      <div>
-        <strong>Total del Carrito: ${calculateTotal()}</strong>
+      <div className='cart-item-total'>
+        <strong>Total compra: ${calculateTotal()}</strong>
       </div>
     </div>
   );

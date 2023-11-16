@@ -4,7 +4,6 @@ import { collectionContext } from './CollectionContext'
 
 export default function ContextProvider({children}) {
 
-    // const [collection, setCollection] = useState([]);
     const [cart, setCart] = useState([]);
 
     // Obtener la colección del localStorage al cargar la aplicación

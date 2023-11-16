@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { collectionContext } from "../../context/CollectionContext";
 import "../cards-productos/styles.css";
 import BotonCompra from "../boton-compra/BotonCompra";
 
 export default function Cards({
-  key,
+  id,
   nombre,
   marca,
   precio,
@@ -23,12 +24,14 @@ export default function Cards({
 
   return (
     <div className="card-container">
-      <p className="card-key">{key}</p>
       <h2 className="card-name">{nombre}</h2>
       <p className="card-price">Precio: ${precio}</p>
       <p className="card-brand">Marca: {marca}</p>
       <p className="card-desc">{descripcion}</p>
-      <img classname="card-img" src={imagen} alt={altimg}></img>
+      <Link to={`/item/${id}`}>
+        <img className="card-img" src={imagen} alt={altimg}></img>
+      </Link>
+      {/* <img classname="card-img" src={imagen} alt={altimg}></img> */}
       <BotonCompra addToCart={addToCart} />
     </div>
   );

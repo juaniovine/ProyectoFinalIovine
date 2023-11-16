@@ -9,6 +9,7 @@ import Contacto from "./components/contacto/Contacto";
 import ContextProvider from './context/ContextProvider';
 import Footer from './components/footer/Footer';
 import CartContent from './components/cartcontent/CartContent';
+import Itemdetail from './components/itemdetail/Itemdetail';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/accesorios" element={<Accesorios />} />
         <Route exact path="/contacto" element={<Contacto />} />
         <Route exact path='/cart' element={<CartContent/>}/>
+        <Route exact path="/item/:productId" element={<Itemdetail />} />
       </Routes>
       <Footer/>
     </div>

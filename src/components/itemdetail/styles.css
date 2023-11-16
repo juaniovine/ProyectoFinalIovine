@@ -1,0 +1,11 @@
+.item-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dffaff;
+    color: #284c99;
+}
+
+.page-container {
+    height: 100%;
+}

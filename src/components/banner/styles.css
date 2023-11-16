@@ -12,14 +12,14 @@
 
 .banner-container h1 {
   margin: 0;
-  color: rgb(122, 159, 232);
+  color: rgb(67, 118, 221);
   text-shadow: 1px 1px 3px #effaff;
   font-size: 62px;
   font-weight: bold;
 }
 
 .banner-container h3 {
-  color: rgb(99, 141, 224);
+  color: rgb(67, 118, 221);
   text-shadow: 1px 1px 3px #effaff;
   font-size: 28px;
 }
