@@ -1,13 +1,13 @@
 .banner {
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    background-image: linear-gradient(#dffaff, #effdff), url('../../../public/backgroundhome.jpg');
+    height: 100%;
+    background-color: #dffaff;
 }
 
 .banner-container {
   text-align: center;
-  padding: 15% 0;
+  padding: 10% 0;
 }
 
 .banner-container h1 {
@@ -18,7 +18,7 @@
   font-weight: bold;
 }
 
-.banner-container p {
+.banner-container h3 {
   color: rgb(99, 141, 224);
   text-shadow: 1px 1px 3px #effaff;
   font-size: 28px;

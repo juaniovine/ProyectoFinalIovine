@@ -1,10 +1,12 @@
-import React from 'react'
-import './styles.css'
-import CartElements from './CartElements'
+import React from "react";
+import "./contentstyles.css";
+import CartElements from "./CartElements";
 
 export default function CartContent() {
-  
   return (
-    <CartElements/>
-  )
+    <div className="cart-page">
+      <h1>Carrito de compras</h1>
+      <CartElements />
+    </div>
+  );
 }

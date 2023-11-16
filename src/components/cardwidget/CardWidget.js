@@ -5,15 +5,12 @@ import { Link } from 'react-router-dom';
 
 export default function CardWidget() {
   
-  const [cantidadItems, setCantidadItems] = useState(0); 
-
-  const {collection, setCollection} = useContext(collectionContext)
+  const {collection} = useContext(collectionContext)
 
   return (
     <div className="carrito-container">
       <Link to={"/cart"}>🛒</Link>
-      {/* <p>{collectionContext.length}</p> */}
-      {cantidadItems >= 0 && <span className="notification">{cantidadItems}</span>}
+      {collection.length >= 0 && <span className="notification">{collection.length}</span>}
     </div>
   )
 }

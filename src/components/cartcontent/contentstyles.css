@@ -1,0 +1,11 @@
+.cart-page {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: #dffaff;
+}
+
+.cart-page h1 {
+    margin: 0;
+    padding: 20px;
+}

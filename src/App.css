@@ -29,9 +29,9 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: #effdff;
-  height: 80vh;
+  height: 100%;
   padding: 10px;
-  background-image: linear-gradient(#dffaff, #effdff);
+  background-color: #dffaff;
 }
 
 
