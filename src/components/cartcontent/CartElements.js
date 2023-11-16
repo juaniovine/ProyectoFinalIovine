@@ -20,6 +20,14 @@ export default function CartElements() {
     setCollection(updatedItems);
   };
 
+  const handleRemoveItem = (index) => {
+    const updatedItems = [...updatedCollection];
+    updatedItems.splice(index, 1);
+
+    setUpdatedCollection(updatedItems);
+    setCollection(updatedItems);
+  };
+
   const calculateTotal = () => {
     return updatedCollection.reduce((total, item) => {
       return total + (item.precio * (item.cantidad || 1));
@@ -35,9 +43,10 @@ export default function CartElements() {
             <tr>
               <th>Producto</th>
               <th>Descripcion</th>
-              <th>Imagen</th>
+              {/* <th>Imagen</th> */}
               <th>Cantidad</th>
               <th>Total por Línea</th>
+              <th>Eliminar</th>
             </tr>
           </thead>
           <tbody>
@@ -45,9 +54,9 @@ export default function CartElements() {
               <tr key={index}>
                 <td>{item.nombre}</td>
                 <td>{item.descripcion}</td>
-                <td>
+                {/* <td>
                   <img src={item.imagen} alt={`Imagen de ${item.nombre}`} style={{ width: '50px', height: '50px' }} />
-                </td>
+                </td> */}
                 <td>
                   <input
                     type="number"
@@ -57,6 +66,9 @@ export default function CartElements() {
                   />
                 </td>
                 <td>${item.precio * (item.cantidad || 1)}</td>
+                <td>
+                  <button onClick={() => handleRemoveItem(index)}>Eliminar</button>
+                </td>
               </tr>
             ))}
           </tbody>
